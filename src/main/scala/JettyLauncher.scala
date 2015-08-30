@@ -13,7 +13,7 @@ object JettyLauncher {
     context.setResourceBase("src/main/webapp")
 
     context.setEventListeners(Array(new ScalatraListener))
-    context.addServlet(classOf[org.foodieMap.foodieMapController], "/*")
+
     server.setHandler(context)
 
     server.start

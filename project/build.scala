@@ -15,7 +15,7 @@ object FoodiemapBuild extends Build {
   lazy val project = Project (
     "foodiemap",
     file("."),
-    settings = Seq(com.typesafe.sbt.SbtStartScript.startScriptForClassesSettings: _*) ++ ScalatraPlugin.scalatraSettings ++ scalateSettings ++ Seq(
+    settings = seq(com.typesafe.sbt.SbtStartScript.startScriptForClassesSettings: _*) ++ ScalatraPlugin.scalatraSettings ++ scalateSettings ++ Seq(
       organization := Organization,
       name := Name,
       version := Version,
