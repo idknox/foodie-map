@@ -6,12 +6,7 @@ import scalate.ScalateSupport
 class FoodieMapController extends FoodiemapStack {
 
   get("/") {
-    <html>
-      <body>
-        <h1>Hello, world!</h1>
-        Say <a href="hello-scalate">hello to Scalate</a>.
-      </body>
-    </html>
+    contentType = "text/html"
+    layoutTemplate("/WEB-INF/templates/views/hello-scalate.jade", "layout" -> "default.jade", "obj" -> Map(1 -> "This is", 2 -> "a test", 3 -> "app."))
   }
-
 }

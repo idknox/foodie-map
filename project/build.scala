@@ -4,6 +4,7 @@ import org.scalatra.sbt._
 import org.scalatra.sbt.PluginKeys._
 import com.mojolly.scalate.ScalatePlugin._
 import ScalateKeys._
+import sass.SbtSass._
 
 object FoodiemapBuild extends Build {
   val Organization = "org.foodieMap"
@@ -15,7 +16,7 @@ object FoodiemapBuild extends Build {
   lazy val project = Project (
     "foodiemap",
     file("."),
-    settings = seq(com.typesafe.sbt.SbtStartScript.startScriptForClassesSettings: _*) ++ ScalatraPlugin.scalatraSettings ++ scalateSettings ++ Seq(
+    settings = baseSbtSassSettings ++ seq(com.typesafe.sbt.SbtStartScript.startScriptForClassesSettings: _*) ++ ScalatraPlugin.scalatraSettings ++ scalateSettings ++ Seq(
       organization := Organization,
       name := Name,
       version := Version,
