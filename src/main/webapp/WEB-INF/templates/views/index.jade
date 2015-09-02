@@ -1,0 +1,19 @@
+- attributes("title") = "Scalatra: a tiny, Sinatra-like web framework for Scala"
+- attributes("headline") = "Welcome to Scalatra"
+-@ val obj: Map[String, String]
+
+!!!
+html
+  head
+    title This is an app
+    script(src="https://code.jquery.com/jquery-1.11.3.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css")
+    link(rel="stylesheet" href="https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.css")
+    script(src="https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.js")
+    link(rel="stylesheet" href="assets/stylesheets/application.css")
+    script(src="assets/javascripts/application.js")
+  body
+    div(class="container-fluid")
+      div(class="row")
+        div(class="col-xs-12 main" id='mainMap' data-maptoken='#{obj("mapBoxAccessToken")}')

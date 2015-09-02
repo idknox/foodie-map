@@ -6,7 +6,9 @@ import scalate.ScalateSupport
 class FoodieMapController extends FoodiemapStack {
 
   get("/") {
+    val mapBoxAccessToken = System.getenv("mapBoxAccessToken")
+
     contentType = "text/html"
-    layoutTemplate("/WEB-INF/templates/views/hello-scalate.jade", "layout" -> "default.jade", "obj" -> Map(1 -> "This is", 2 -> "a test", 3 -> "app."))
+    layoutTemplate("/WEB-INF/templates/views/index.jade", "obj" -> Map("mapBoxAccessToken" -> mapBoxAccessToken))
   }
 }
