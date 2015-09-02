@@ -8,6 +8,7 @@ html
     title This is an app
     script(src="https://code.jquery.com/jquery-1.11.3.min.js")
     script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css")
     link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css")
     link(rel="stylesheet" href="https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.css")
     script(src="https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.js")
@@ -16,4 +17,6 @@ html
   body
     div(class="container-fluid")
       div(class="row")
+        div(class="col-xs-12 mainTitle")
+          h1(class="") Foodie Map
         div(class="col-xs-12 main" id='mainMap' data-maptoken='#{obj("mapBoxAccessToken")}')

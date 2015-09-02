@@ -1,7 +1,15 @@
-* {
-  color: red;
+h1 {
+  font-size: 6em;
+  color: #C6DBA8;
+}
+
+.mainTitle {
+  background: #4B548D;
+  padding: 0 30px;
+  height: 20vh;
+  font-family: Helvetica, sans-serif;
 }
 
 .main {
-  height: 600px;
+  height: 80vh;
 }
